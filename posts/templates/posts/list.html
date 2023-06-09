@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Posts
+{% endblock title %}
+
+{% block content %}
+<main>
+    <h1>My Posts</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+        </tr>
+        {% for item in posts %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</main>
+{% endblock content %}
