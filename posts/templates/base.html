@@ -12,6 +12,22 @@
 </head>
 
 <body>
+<header>
+    <nav class = 'navbar'>
+        <ul>
+            <li class="left"><a href="{% url 'homepage' %}">Trail Tales</a></li>
+            {% if user.is_authenticated %}
+            <li class="left"><a>Create Blog Post</a></li>
+            <li class="left"><a>Edit Blog Post</a></li>
+
+            <li class="right"><a href="{% url 'logout' %}">Logout</a></li>
+
+            {% else %}
+            <li class="right"><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
     {% block content %}
     {% endblock content %}
 </body>

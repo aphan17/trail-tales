@@ -8,5 +8,6 @@ class PostAdmin(admin.ModelAdmin):
         "name",
         "date",
         "author",
+        "id",
     )
     search_fields = ['name']

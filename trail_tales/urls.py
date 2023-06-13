@@ -24,6 +24,6 @@ def redirect_to_posts_list(request):
 urlpatterns = [
     path("", redirect_to_posts_list, name="homepage"),
     path("admin/", admin.site.urls),
-    path("posts", include("posts.urls")),
+    path("posts/", include("posts.urls")),
     path("accounts/", include("accounts.urls")),
 ]

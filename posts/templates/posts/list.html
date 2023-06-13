@@ -6,16 +6,18 @@ Trail Tales
 
 {% block content %}
 <main>
-    <h1>Trail Tales </h1>
-    <table>
-        <tr>
-            <th>Name</th>
-        </tr>
-        {% for item in posts %}
-        <tr>
-            <td>{{item.name}}</td>
-        </tr>
+    <h1>Trail Tales</h1>
+    <p>Welcome to the breathtaking world of Wanderlust Trails, a captivating hiking blog dedicated to sharing thrilling adventures, awe-inspiring landscapes, and invaluable tips for nature enthusiasts. Join us as we traverse the globe, uncover hidden gems, and embark on epic journeys through untamed wilderness. </p>
+
+    <div class = "container">
+        {% for post in posts %}
+        <div class = 'post-body'>
+            <h2><a>{{post.name}}</a></h2>
+            <p>{{post.date}}</p>
+            <div>{{post.hike_length}} miles, {{post.elevation}} ft. </div>
+        </div>
         {% endfor %}
-    </table>
+    </div>
+
 </main>
 {% endblock content %}
