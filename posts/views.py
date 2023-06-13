@@ -34,3 +34,22 @@ def create_post(request):
         "form": form,
     }
     return render(request, "posts/create.html", context)
+
+def edit_post(request, id):
+    if Post and PostForm:
+        post = Post.objects.get(id=id)
+        if request.method == "POST":
+            form = PostForm(request.POST, instance=post)
+            if form.is_valid():
+                post.save()
+                return redirect("post_detail", id=id)
+
+        else:
+            form = PostForm(instance=post)
+    else:
+        form = None
+
+    context = {
+        "form": form,
+    }
+    return render(request, "posts/edit.html", context)
