@@ -18,3 +18,49 @@ header nav ul li a {
     font-weight: bold;
     text-decoration: none;
   }
+
+
+input {
+    height: 1.5em;
+    margin: 0;
+    padding: .25em .5em;
+  }
+
+textarea {
+    margin: 0;
+    padding: .25em .5em;
+  }
+
+
+.login-form, .signup-form {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  max-width: 400px;
+  padding: 2em;
+}
+
+.post-form {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    max-width: 800px;
+    padding: 2em;
+}
+
+.login-form p,
+.signup-form p,
+.post-form p {
+  display: grid;
+  align-items: center;
+  column-gap: 10px;
+  grid-template-columns: 100px 1fr;
+}
+
+.login-form button,
+.signup-form button,
+.post-form button {
+    padding: 0.25em 1em
+}
