@@ -3,8 +3,8 @@ from django.conf import settings
 
 # Create your models here.
 class Post(models.Model):
-    name = models.CharField(max_length=100)
-    length = models.DecimalField(max_digits=10, decimal_places=1)
+    name = models.CharField(max_length=100, unique=True)
+    hike_length = models.DecimalField(max_digits=10, decimal_places=1)
     elevation = models.IntegerField()
     description = models.TextField(max_length=2000)
     date = models.DateField(null=True)
@@ -14,5 +14,8 @@ class Post(models.Model):
         on_delete=models.CASCADE,
     )
 
+    class Meta:
+        ordering = ['-date']
+
     def __str__(self):
-        return self.author
+        return str(self.author)
