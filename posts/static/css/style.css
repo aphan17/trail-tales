@@ -1,5 +1,9 @@
+body {
+  background-color: #3A473E;
+}
+
 header nav ul {
-    background-color: white;
+    background-color:#5F7566;
     border-bottom: 1px solid #CCC;
     box-sizing: border-box;
     list-style: none;
@@ -17,6 +21,7 @@ header nav ul li {
 header nav ul li a {
     font-weight: bold;
     text-decoration: none;
+    color: lightgray;
   }
 
 
@@ -63,4 +68,15 @@ textarea {
 .signup-form button,
 .post-form button {
     padding: 0.25em 1em
+}
+
+.intro, .post-body, .post-detail {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  margin-bottom: 10px;
+  border: 10px;
+  max-width: 800px;
+  padding: 2em;
 }

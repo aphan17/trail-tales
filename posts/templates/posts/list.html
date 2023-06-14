@@ -6,10 +6,12 @@ Trail Tales
 
 {% block content %}
 <main>
+    <div class="intro">
     <h1>Trail Tales</h1>
     <p>Welcome to the breathtaking world of Wanderlust Trails, a captivating hiking blog dedicated to sharing thrilling adventures, awe-inspiring landscapes, and invaluable tips for nature enthusiasts. Join us as we traverse the globe, uncover hidden gems, and embark on epic journeys through untamed wilderness. </p>
+    </div>
 
-    <div class = "container">
+    <div class = "post-list">
         {% for post in posts %}
         <div class = 'post-body'>
             <h2><a href="{% url 'post_detail' post.id %}">{{post.name}}</a></h2>
