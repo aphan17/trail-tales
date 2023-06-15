@@ -1,6 +1,32 @@
-body {
-  background-color: #3A473E;
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body  {
+  background-image: url('https://images.unsplash.com/photo-1565021303704-74803eb1fae6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
 }
+
+@-webkit-keyframes slidein {
+  from {background-position: top; background-size:3000px; }
+  to {background-position: -100px 0px;background-size:2750px;}
+  }
+
+  @keyframes slidein {
+  from {background-position: top;background-size:3000px; }
+  to {background-position: -100px 0px;background-size:2750px;}
+
+  }
+
 
 header nav ul {
     background-color:#5F7566;
