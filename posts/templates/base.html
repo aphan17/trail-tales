@@ -17,7 +17,7 @@
 <header>
     <nav class = 'navbar'>
         <ul>
-            <li class="left"><a href="{% url 'homepage' %}"><img src="https://loading.io/s/icon/piujnu.svg" height="40" width="40"/></a></li>
+            <li class="left"><a href="{% url 'homepage' %}"><img src="{% static 'css/forest-outline.svg' %}" height="40" width="40"/></a></li>
             {% if user.is_authenticated %}
             <li class="left"><a href="{% url 'create_post' %}"><img src="{% static 'css/pencil-outline.svg'%}" height="40" width="40"></a></li>
             {% block nav %}
