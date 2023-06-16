@@ -17,15 +17,18 @@
 <header>
     <nav class = 'navbar'>
         <ul>
-            <li class="left"><a href="{% url 'homepage' %}"><img src="{% static 'css/forest-outline.svg' %}" height="40" width="40"/></a></li>
+            <li class="left"><a href="{% url 'homepage' %}" title="Homepage"><img src="{% static 'css/forest-outline.svg' %}" height="40" width="40"/></a></li>
+
             {% if user.is_authenticated %}
-            <li class="left"><a href="{% url 'create_post' %}"><img src="{% static 'css/pencil-outline.svg'%}" height="40" width="40"></a></li>
+            <li class="left"><a href="{% url 'create_post' %}"title="Create Post"><img src="{% static 'css/pencil-plus-outline.svg'%}" height="40" width="40"></a></li>
+
             {% block nav %}
             {% endblock nav %}
 
-            <li class="right"><a href="{% url 'logout' %}"><img src="{% static 'css/logout-variant.svg' %}" height="40" width="40"></a></li>
+            <li class="right"><a href="{% url 'logout' %}" title="Logout"><img src="{% static 'css/logout-variant.svg' %}" height="40" width="40"></a></li>
             {% else %}
-            <li class="right"><a href="{% url 'login' %}"><img src="{% static 'css/login-variant.svg' %}" height="40" width="40"></a></li>
+
+            <li class="right"><a href="{% url 'login' %}" title="Login"><img src="{% static 'css/login-variant.svg' %}" height="40" width="40"></a></li>
             {% endif %}
 
         </ul>

@@ -3,8 +3,8 @@
 body  {
   background-image: url('https://images.unsplash.com/photo-1565021303704-74803eb1fae6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80');
   background-size:cover;
-        -webkit-animation: slidein 100s;
-        animation: slidein 100s;
+        -webkit-animation: slidein 150s;
+        animation: slidein 150s;
 
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
@@ -30,7 +30,6 @@ body  {
 
 header nav ul {
     background-color:#5F7566;
-    border-bottom: 1px solid #CCC;
     box-sizing: border-box;
     list-style: none;
     margin-top: 0;
@@ -50,6 +49,12 @@ header nav ul li a {
     color: lightgray;
   }
 
+a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: lightgray;
+  }
+
 
 input {
     height: 1.5em;
@@ -64,7 +69,9 @@ textarea {
 
 
 .login-form, .signup-form {
-  background-color: white;
+  background-color: #000;
+  color: #fff;
+  opacity: .5;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: auto;
@@ -73,12 +80,14 @@ textarea {
 }
 
 .post-form {
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: auto;
-    max-width: 800px;
-    padding: 2em;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  max-width: 800px;
+  padding: 2em;
 }
 
 .login-form p,
@@ -97,7 +106,9 @@ textarea {
 }
 
 .intro, .post-body, .post-detail {
-  background-color: white;
+  background-color: #5B7F8F;
+  color: #fff;
+  opacity: 0.9;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: auto;
